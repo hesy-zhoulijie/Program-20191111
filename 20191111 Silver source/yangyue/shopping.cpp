@@ -1,0 +1,1 @@
+#include <bits/stdc++.h>#define int long longusing namespace std;int b,p,MOD;int ksm(int x,int y){    int aaa=1,bbb=x;    while(y>0){        if(y&1){aaa=aaa*bbb;aaa=aaa%MOD;}        bbb=bbb*bbb;        bbb=bbb%MOD;        y=y/2;    }    return aaa%MOD;}signed main(){	cin>>b>>p>>MOD;	cout<<b<<"^"<<p<<" mod "<<MOD<<"="<<ksm(b,p);}
